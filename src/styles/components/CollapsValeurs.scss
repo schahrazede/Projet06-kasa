@@ -1,0 +1,20 @@
+$margin-large-screen: 150px;
+$margin-medium-screen: 40px;
+$margin-small-screen: 20px;
+
+.drop-down-zone {
+  list-style: none;
+  margin-inline-start: $margin-large-screen;
+  margin-inline-end: $margin-large-screen;
+
+  @media screen and (max-width: 1000px) {
+    margin-inline-start: $margin-medium-screen;
+    margin-inline-end: $margin-medium-screen;
+  }
+
+  @media screen and (max-width: 740px) {
+    margin-inline-start: $margin-small-screen;
+    margin-inline-end: $margin-small-screen;
+  }
+}
+

@@ -1,0 +1,16 @@
+$primary-color: #ff6060;
+$font-size-rate-large-screen: 18px;
+$font-size-rate-small-screen: 3vw;
+
+.rate {
+  color: #E3E3E3;
+  margin: 3px;
+
+  &.colored {
+    color: $primary-color;
+  }
+
+  @media screen and (max-width: 1000px) {
+    font-size: $font-size-rate-small-screen;
+  }
+}

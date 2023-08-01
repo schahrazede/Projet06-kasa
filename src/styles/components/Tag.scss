@@ -1,0 +1,24 @@
+$primary-color: #ff6060;
+$font-size-tag-large-screen: 14px;
+$font-size-tag-small-screen: 2.5vw;
+$width-tag-large-screen: 115px;
+$width-tag-small-screen: 20vw;
+
+.tag {
+  background: $primary-color;
+  color: #fff;
+  border-radius: 10px;
+  width: $width-tag-large-screen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: $font-size-tag-large-screen;
+  padding: 5px;
+  margin-right: 10px;
+
+  @media screen and (max-width: 740px) {
+    font-size: $font-size-tag-small-screen;
+    width: $width-tag-small-screen;
+  }
+}

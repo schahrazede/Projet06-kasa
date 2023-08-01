@@ -1,0 +1,33 @@
+$font-size-large-screen: 7vw;
+$font-size-small-screen: 7vw;
+$left-position-large-screen: 2.5vw;
+$right-position-large-screen: 2.5vw;
+$transition-duration: 0.3s;
+$hover-color: #fff;
+$default-color: #ffffffc5;
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  font-size: $font-size-large-screen;
+  cursor: pointer;
+  top: 50%;
+  color: $default-color;
+  transition: $transition-duration all;
+  z-index: 3;
+}
+
+.arrow-left {
+  left: $left-position-large-screen;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.arrow-right {
+  right: $right-position-large-screen;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  color: $hover-color;
+}

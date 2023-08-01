@@ -1,0 +1,49 @@
+
+$primary-color: #ff6060;
+$secondary-color: #9C4343;
+$overlay-color: #ffffff00;
+$overlay-background: #00000050;
+$border-radius: 10px;
+$transition-duration: 0.5s;
+
+.card {
+  height: 340px;
+  cursor: pointer;
+  position: relative;
+  border-radius: $border-radius;
+  transition: $transition-duration all;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: $transition-duration all;
+  }
+
+  .overlay {
+    position: absolute;
+    background-image: linear-gradient(to bottom, $overlay-color, $overlay-background);
+    height: 100%;
+    width: 100%;
+    border-radius: $border-radius;
+    z-index: 1;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $border-radius;
+  }
+
+  span {
+    position: absolute;
+    text-align: left;
+    bottom: 13px;
+    left: 13px;
+    color: #fff;
+    z-index: 2;
+  }
+
+  @media screen and (max-width: 1000px) {
+    max-height: 255px;
+  }
+}

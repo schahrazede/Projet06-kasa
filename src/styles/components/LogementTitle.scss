@@ -1,0 +1,28 @@
+$primary-color: #ff6060;
+$font-size-h1-large-screen: 36px;
+$font-size-p-large-screen: 18px;
+$font-size-h1-small-screen: 3.5vw;
+$font-size-p-small-screen: 2.5vw;
+
+.logement-title {
+  color: $primary-color;
+
+  h1 {
+    font-size: $font-size-h1-large-screen;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: $font-size-p-large-screen;
+  }
+
+  @media screen and (max-width: 1000px) {
+    h1 {
+      font-size: $font-size-h1-small-screen;
+    }
+
+    p {
+      font-size: $font-size-p-small-screen;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.error404 {
+    text-align: center;
+    color: #ff6060;
+    padding-bottom: 10px;
+}
+.error404 h1 {
+       /* font-size: 288px; */
+       font-size: 240px;
+        padding: 20px 0 10px;
+        text-align: center;
+}
+.error404 p {
+    font-size: 36px;
+    padding-bottom: 70px;
+   
+}
+ .error404 a span {
+    text-decoration: underline;
+    color: #ff6060;
+    font-size: 18px;
+
+    &:hover {
+        color: #ffa5a5;
+        transition: 0.3s all;
+    }
+}
+@media screen and (max-width: 1000px) {
+    
+     .error404 h1 {
+        font-size: 25vw;
+    }
+
+     .error404  p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+     .error404 a span {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+  .error404 {
+    overflow-x: hidden;
+  }
+  @media screen and (max-width: 665px) {
+    .error404 h1 {
+       
+     padding: 80px 0 10px;
+        
+ }
+  }

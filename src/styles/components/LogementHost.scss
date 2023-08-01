@@ -1,0 +1,43 @@
+// styles.scss (ou tout autre nom de fichier avec l'extension .scss)
+
+$primary-color: #ff6060;
+$font-size-span-large-screen: 18px;
+$font-size-span-small-screen: 3vw;
+$width-span-large-screen: 90px;
+$width-span-small-screen: 10vw;
+$margin-img-large-screen: 10px;
+$margin-img-small-screen: 1vw;
+$img-size-large-screen: 64px;
+$img-size-small-screen: 10vw;
+
+.logement-host {
+  display: flex;
+  align-items: center;
+ 
+
+  span {
+    color: $primary-color;
+    font-size: $font-size-span-large-screen;
+    width: $width-span-large-screen;
+    text-align: right;
+    margin: 0 $margin-img-large-screen;
+  }
+
+  img {
+    width: $img-size-large-screen;
+    border-radius: 50%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    span {
+      font-size: $font-size-span-small-screen;
+      width: $width-span-small-screen;
+      margin: 0 $margin-img-small-screen;
+    }
+
+    img {
+      width: $img-size-small-screen;
+      margin: 0 $margin-img-small-screen;
+    }
+  }
+}

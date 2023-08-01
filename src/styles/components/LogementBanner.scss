@@ -1,0 +1,51 @@
+$margin-large-screen: 40px;
+$margin-medium-screen: 20px;
+$max-height-small-screen: 255px;
+$height-small-screen: 50vw;
+$font-size-small-screen: 1.5vw;
+
+.logement-banner {
+  margin: 0 $margin-large-screen;
+  height: 415px;
+  position: relative;
+
+  .img-banner {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+    display: none;
+
+    &.active-banner {
+      display: block;
+    }
+  }
+
+  .counter {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background: #fff5f528;
+    border-radius: 10px;
+    width: 50px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media screen and (max-width: 1000px) {
+    margin: 0 $margin-medium-screen;
+  }
+
+  @media screen and (max-width: 740px) {
+    max-height: $max-height-small-screen;
+    height: $height-small-screen;
+
+    .counter {
+      font-size: $font-size-small-screen;
+      display: none;
+    }
+  }
+}
