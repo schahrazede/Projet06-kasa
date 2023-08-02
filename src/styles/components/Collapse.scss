@@ -1,56 +1,60 @@
-.drop-down,
-.drop-down.drop {
-    background: #ff6060;
-    font-size: 24px;
-    margin-top: 20px;
-    padding: 5px 20px 5px 10px;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 30px;
-    max-height: 1000px;
-   
-}
+// .drop-down,
+// .drop-down.drop {
+//     background: #ff6060;
+//     font-size: 24px;
+//     margin-top: 20px;
+//     padding: 5px 20px 5px 10px;
+//     border-radius: 5px;
+//     color: #fff;
+//     cursor: pointer;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     max-height: 1000px;
 
-.description,
-.description.drop {
-    background: #F6F6F6;
-    font-size: 20px;
-    padding: 20px 20px 7px 10px;
-    border-radius: 5px;
-    color: #ff6060;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.description.closed {
-    visibility:hidden;
-    animation: fermeture;
-    max-height: 0;
-}
-.opened {
-    animation: ouverture;
-    animation-duration: 300ms;
-    max-height: 1000px;
-   
-}
+// }
 
-@keyframes ouverture {
-    0% {
-        transform: translateY(-10px);
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }      
-    100% {
-        transform: translateY(0);
-        animation-timing-function: ease-in;
-        opacity: 1;
-    }
-}
+// .description,
+// .description.drop {
+//     background: #F6F6F6;
+//     font-size: 20px;
+//     padding: 10px 10px 5px 7px;
+//     border-radius: 5px;
+//     color: #ff6060;
+//     cursor: pointer;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     opacity: 1; /* Par défaut, l'élément est complètement visible */
+//   transition: opacity 0.7s ease;
+//   overflow: hidden;
+// }
+// .description.closed {
+//     animation: fermeture;
+//     opacity: 0;
+//     max-height: 0;
+//     animation-duration: 300ms;
+// }
+// .opened {
+//     animation: ouverture;
+//     animation-duration: 300ms;
+//     max-height: 1000px;
+
+// }
+
+
+// @keyframes ouverture {
+//     0% {
+//         transform: translateY(-10px);
+//         animation-timing-function: ease-in;
+//         opacity: 0;
+//     }      
+//     100% {
+//         transform: translateY(0);
+//         animation-timing-function: ease-in;
+//         opacity: 1;
+//     }
+// }
 
 // @keyframes fermeture {
 //     0% {
@@ -64,9 +68,95 @@
 //         opacity: 0;
 //     }
 // }
+// @media screen and (max-width:1000px) {
+
+//     .drop-down {
+//         font-size: 3vw;
+//         margin-top: 15px;
+//     }
+
+//     .description {
+//         font-size: 3vw;
+//         padding-top: 2.5vw
+//     }
+// }
+.content,.content.drop {
+    background: #ff6060;
+    font-size: 24px;
+    margin-top: 20px;
+    padding: 5px 20px 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+    .description, .description.drop {
+        background: #F6F6F6;
+        font-size: 20px;
+        padding: 10px 10px 5px 7px;
+        border-radius: 5px;
+        color: #ff6060;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        opacity: 1;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        overflow: hidden;
+        max-height: 1000px;
+    }
+
+    .closed {
+        animation: fermeture;
+        opacity: 0;
+        max-height: 0;
+        animation-duration: 500ms;
+    }
+
+.opened {
+    animation: ouverture;
+    animation-duration: 300ms;
+    max-height: 1000px;
+
+}
+
+@keyframes ouverture {
+    0% {
+        transform: translateY(-10px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+}
+
+@keyframes fermeture {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-5px); /* Ajouter une étape intermédiaire pour éviter la superposition de la flèche */
+    }
+
+    100% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+}
+
 @media screen and (max-width:1000px) {
 
-    .drop-down {
+    .content {
         font-size: 3vw;
         margin-top: 15px;
     }
@@ -76,7 +166,3 @@
         padding-top: 2.5vw
     }
 }
-
-
-
-

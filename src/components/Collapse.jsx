@@ -10,7 +10,7 @@ function Collapse(props) {
   return (
     <li>
       <div>
-        <p onClick={handleClick} className="drop-down">
+        <p onClick={handleClick} className="content">
           {props.label}
           <ArrowCollapse
             className={
