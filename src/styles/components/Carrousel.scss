@@ -24,11 +24,12 @@ $font-size-small-screen: 1.5vw;
   .counter {
     display: flex;
     justify-content: center;
-    color: #fff;
+    color: #FFFFFF;
     background: #fff5f528;
     border-radius: 10px;
-    width: 50px;
-    font-weight: bold;
+    width: 24px;
+    font-weight:500;
+    font-size: 18px;
     position: absolute;
     bottom: 7%;
     left: 50%;

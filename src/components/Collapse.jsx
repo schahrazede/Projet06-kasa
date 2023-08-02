@@ -20,7 +20,7 @@ function Collapse(props) {
             }
           />
         </p>
-        <p className={`description ${isClicked ? "" : "closed"}`}>
+        <p className={`description ${isClicked ? "opened" : "closed"}`}>
           {props.description}
         </p>
       </div>

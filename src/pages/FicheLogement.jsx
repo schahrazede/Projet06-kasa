@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import LogementBanner from "../components/LogementBanner";
 import LogementTitle from "../components/LogementTitle";
 import LogementHost from "../components/LogementHost";
 import Tag from "../components/Tag";
@@ -12,6 +11,7 @@ import { logementList } from "../data/data";
 import { useParams } from "react-router-dom";
 import Error404 from "./Error404";
 import ArrowBanner from "../components/ArrowBanner";
+import Carrousel from "../components/Carrousel";
 function FicheLogement() {
   const { id } = useParams();
   const logement = logementList.find((logement) => logement.id === id);
@@ -60,7 +60,7 @@ function FicheLogement() {
           />
         </div>
         {logement.pictures.map((e, index) => (
-          <LogementBanner
+          <Carrousel
             className={`img-banner ${
               index === activeBanner ? "active-banner" : ""
             }`}
