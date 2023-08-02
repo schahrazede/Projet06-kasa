@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     height: 30px;
+    max-height: 1000px;
    
 }
 
@@ -30,10 +31,12 @@
     display: none !important;
     animation: fermeture;
     animation-duration: 300ms; 
+    max-height: 0;
 }
 .opened {
     animation: ouverture;
     animation-duration: 300ms;
+    max-height: 1000px;
    
 }
 
