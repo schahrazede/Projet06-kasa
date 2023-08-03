@@ -1,5 +1,5 @@
-
-.content,.content.drop {
+.content,
+.content.arrow {
     background: #ff6060;
     font-size: 24px;
     margin-top: 20px;
@@ -10,65 +10,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  
 }
-    .description, .description.drop {
-        background: #F6F6F6;
-        font-size: 20px;
-        padding: 10px 10px 5px 7px;
-        border-radius: 5px;
-        color: #ff6060;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        opacity: 1;
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-        overflow: hidden;
-        max-height: 1000px;
-    }
+.description,
+.description.arrow {
+    background: #F6F6F6;
+    font-size: 20px;
+    padding: 20px 20px 7px 10px;
+    border-radius: 5px;
+    color: #ff6060;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.7s ease, opacity 0.7s ease;
+    
+}
 
-    .closed {
-        animation: fermeture;
-        opacity: 0;
-        max-height: 0;
-        animation-duration: 500ms;
-    }
-
-.opened {
-    animation: ouverture;
-    animation-duration: 300ms;
+.description.closed {
+    opacity: 0;
+    max-height: 0;
+}
+.description.opened{
     max-height: 1000px;
-
-}
-
-@keyframes ouverture {
-    0% {
-        transform: translateY(-10px);
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        animation-timing-function: ease-in;
-        opacity: 1;
-    }
-}
-
-@keyframes fermeture {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    50% {
-        transform: translateY(-5px); 
-    }
-
-    100% {
-        transform: translateY(-10px);
-        opacity: 0;
-    }
+    opacity: 1;
 }
 
 @media screen and (max-width:1000px) {
@@ -79,7 +47,16 @@
     }
 
     .description {
-        font-size: 3vw;
+        font-size: 2vw;
         padding-top: 2.5vw
     }
 }
+@media screen and (max-width:600px) {
+    .description {
+        font-size: 12px;
+        padding-top: 2.5vw
+    }
+}
+
+
+    
