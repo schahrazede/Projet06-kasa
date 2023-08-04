@@ -1,5 +1,4 @@
-.content,
-.content.arrow {
+.content {
     background: #ff6060;
     font-size: 24px;
     margin-top: 20px;
@@ -10,39 +9,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+    height: 30px;
 }
-.description,
-.description.arrow {
+.description {
     background: #F6F6F6;
     font-size: 20px;
     padding: 20px 20px 7px 10px;
     border-radius: 5px;
     color: #ff6060;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    line-height: 1.5;
+    visibility:hidden;
+    max-height: 0;
     overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 0.7s ease, opacity 0.7s ease;
-    
-}
-
+  }
+  
 .description.closed {
-    opacity: 0;
     max-height: 0;
-}
-.description.opened{
+    transition: max-height 0.9s ease, visibility 0.9s ease;
+  }
+  
+.description.opened {
     max-height: 1000px;
-    opacity: 1;
-}
-
+    visibility: visible;
+    transition: max-height 1s ease-in-out;
+  }
 @media screen and (max-width:1000px) {
 
     .content {
-        font-size: 3vw;
+        font-size: 13px;
         margin-top: 15px;
     }
 

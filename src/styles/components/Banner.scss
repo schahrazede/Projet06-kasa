@@ -1,7 +1,7 @@
 
 $primary-color: #007bff;
 $banner-padding: 40px;
-$border-radius: 30px;
+$border-radius: 25px;
 
 .banner {
   height: 223px;
@@ -49,5 +49,14 @@ $border-radius: 30px;
 @media screen and (max-width:740px) {
   .banner h1 {
     font-size: 24px;
+  }
+  .banner img {
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width:450px) {
+  .banner h1 {
+    text-align: start;
+    margin-left: 15px;
   }
 }
